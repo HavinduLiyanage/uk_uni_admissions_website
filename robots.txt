@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /.htaccess
+Disallow: /ukadmit-data.js
+
+Sitemap: https://ukadmissions.co.uk/sitemap.xml

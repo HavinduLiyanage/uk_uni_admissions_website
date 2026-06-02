@@ -1,0 +1,6 @@
+# Exclude original design/stitch portfolio folder
+stitch_ukadmit_modern_redesign_portfolio/
+
+# OS files
+.DS_Store
+Thumbs.db

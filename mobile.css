@@ -1,0 +1,123 @@
+/* UKAdmit — Mobile Responsiveness Stylesheet */
+
+/* ─── Global ─────────────────────────────────── */
+html, body { overflow-x: hidden; }
+
+/* ─── Typography ─────────────────────────────── */
+@media (max-width: 767px) {
+  .text-display-lg {
+    font-size: 2.25rem !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.01em !important;
+  }
+  .text-headline-lg {
+    font-size: 1.875rem !important;
+    line-height: 1.25 !important;
+    letter-spacing: 0 !important;
+  }
+  .text-headline-md {
+    font-size: 1.375rem !important;
+  }
+}
+
+@media (max-width: 479px) {
+  .text-display-lg { font-size: 1.875rem !important; }
+  .text-headline-lg { font-size: 1.625rem !important; }
+}
+
+/* ─── Section Spacing ────────────────────────── */
+@media (max-width: 767px) {
+  .py-section-gap {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
+  .pt-section-gap { padding-top: 3.5rem !important; }
+  .pb-section-gap { padding-bottom: 3.5rem !important; }
+  .mb-section-gap { margin-bottom: 3.5rem !important; }
+  .mt-section-gap { margin-top: 3.5rem !important; }
+}
+
+/* ─── Hero Heights ───────────────────────────── */
+@media (max-width: 767px) {
+  /* Index hero */
+  .hero-gradient {
+    min-height: auto !important;
+    padding-top: 5rem !important;
+    padding-bottom: 3rem !important;
+  }
+  /* Coventry university hero */
+  .relative.min-h-\[716px\],
+  section.min-h-\[716px\] {
+    min-height: auto !important;
+    padding-top: 5rem !important;
+    padding-bottom: 3rem !important;
+  }
+}
+
+/* ─── Fixed Image Heights ────────────────────── */
+@media (max-width: 767px) {
+  /* About page hero image */
+  .h-\[400px\] { height: 220px !important; }
+  /* University overview image */
+  .h-\[500px\] { height: 260px !important; }
+  /* Index hero image */
+  .h-\[600px\] { height: 300px !important; }
+}
+
+/* ─── Success Stories Bento ──────────────────── */
+/* Featured testimonial: all children are absolute-positioned,
+   so give the container a defined height on mobile */
+@media (max-width: 767px) {
+  .md\:col-span-8 {
+    min-height: 360px !important;
+  }
+}
+
+/* ─── Programme Cards ────────────────────────── */
+@media (max-width: 767px) {
+  /* Allow programme cards to grow naturally */
+  .h-\[560px\] { height: auto !important; }
+}
+
+/* ─── CTA Hero Buttons ───────────────────────── */
+@media (max-width: 639px) {
+  .hero-cta-buttons {
+    flex-direction: column;
+  }
+  .hero-cta-buttons > * {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+/* ─── Nav adjustment handled inline ─────────── */
+/* nav inner container: px-4 sm:px-8 (changed in HTML) */
+
+/* ─── Contact Page ───────────────────────────── */
+@media (max-width: 767px) {
+  /* Final CTA heading */
+  .text-\[40px\] { font-size: 1.875rem !important; }
+  .text-\[48px\] { font-size: 2.25rem !important; }
+}
+
+/* ─── Programmes Sidebar ─────────────────────── */
+@media (max-width: 1023px) {
+  /* On tablet/mobile, sidebar loses sticky and stacks */
+  aside.sticky { position: static !important; }
+}
+
+/* ─── Bento Grids (Success Stories) ─────────── */
+@media (max-width: 767px) {
+  /* Remove the fixed auto-rows set via Tailwind arbitrary */
+  .grid { grid-auto-rows: auto !important; }
+}
+
+/* ─── Section Flex Headers ───────────────────── */
+@media (max-width: 639px) {
+  .section-header-flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.75rem !important;
+  }
+}
