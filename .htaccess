@@ -76,9 +76,8 @@ ErrorDocument 404 /404.html
   # Permissions policy
   Header always set Permissions-Policy "camera=(), microphone=(), geolocation=()"
 
-  # HSTS (enable after confirming HTTPS works - 6 months)
-  # Uncomment this line once SSL is confirmed working on GoDaddy:
-  # Header always set Strict-Transport-Security "max-age=15768000; includeSubDomains"
+  # HSTS - forces HTTPS for all return visitors (6 months)
+  Header always set Strict-Transport-Security "max-age=15768000; includeSubDomains"
 </IfModule>
 
 # ============================================================

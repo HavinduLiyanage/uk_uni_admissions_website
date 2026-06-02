@@ -17,12 +17,12 @@
   );
 
   const programmeImages = [
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuB6uxKkpMfg9Rp9uSH43XAnit2X4oB9TkXLdMXblTiBc7K2gwI3IHS8JpIKWINcY04R9x5-UnCIGh2leM4G_OEIbUA5Z2KEcvCQxphhm3ZjuNyO_gIMzpDOZA7Rj-uwcbs-aVQgpuvQri936auFkt-wF-ng1cW8qe7hzV6I13ZYCwV6zRVhLuX_RMly62-K5kEgUUeq7OMGenPBmEmHbomWUFZWOM5izmruwBuE54hEjpbTJClO5FS85pN3DlRr9jCKE1fb2rsYsuo",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuBfM2ybX6m1kPEg81FZyZ_zvNs3AnMsgQHrL797Ie5Bvr_LPl1UdtDNCRA3ctFowVVSfxGdeDjXZ1fx_tlTY4pW-0-0nWrzmUWysaje6bHYCGlBb2KhrLG4uTuiHG8IsWeePLxfbl09o8ZRRSGFZBNx7J0pdDEe2yfzkyVZZPbc2E9qPW0xl3phWZDCj2T2U2sVZuCcclCM6z9oAuCy14a9_sEQu8nuIwPb5pZUVg3hugurAYrUVyanI_Js8tVMcX6d-tzw6cCwNqk",
-    "https://lh3.googleusercontent.com/aida-public/AB6AXuD9Aki1MzQnJ3KdWtLIfTqKxxpPpi6pe9BqGdMYM7Im_Od7J8PQzQoVgl8oKAMbOEGiKSq47fehmialuK2P_ulHfmU7K4VGsfmmynDwq06kZHdWvTdNEISn7gan49AX3jMKCVngomDijW6HMq8zu9GvQYHIwYTovKGnXBSfFgBhyTl--RSdTyqYHafgAO9QeHWGTehr7xqOq-kYm-srRNUxAfP8JAwJ7t5ByFrAFUE5tGOtRpG_npjt9L0W6lr-AMOQTGLIzG-nAHw"
+    "assets/programmes/programme-1.jpg",
+    "assets/programmes/programme-2.jpg",
+    "assets/programmes/programme-3.jpg"
   ];
 
-  const universityImage = "https://lh3.googleusercontent.com/aida-public/AB6AXuDt49JdVlR1Qxl167-aEquOVWui4YLRW4IQPW8ipa40l-C7ezlJgNtr6snqUViqTT8fNbhENfx5-KC6KcjuDheYNyTIUB0_odVjSp9Gkb8NpUp79tqj3do-3EWyozkJ3EFSTB1GYobVWLM9tnqaqXY7F0LmeBYMWJ8FWzIsr3fYnywCtxT56I5NwORRBglT7KIh_3rqatrUb_EjgPUJQqcA1fyjfP8um5yGKXudKqOFfU3wHnF3vpi_mKgXja3CyXKzU1LSWnZSs_0";
+  const universityImage = "assets/universities/university-generic.jpg";
   const universityCardImageSlugOverrides = {
     "the-university-of-buckingham": "university-of-buckingham",
     "university-of-the-west-of-england-uwe": "university-of-the-west-of-england"
