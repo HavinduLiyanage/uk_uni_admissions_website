@@ -56,6 +56,7 @@
 <link href="mobile.css" rel="stylesheet"/>
 </head>
 <body class="bg-[#fbf9fb] flex flex-col min-h-screen">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-secondary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-label-bold focus:text-sm" id="skip-to-main">Skip to main content</a>
 
 <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/50 shadow-sm h-[72px]" style="font-family:Manrope,sans-serif;">
   <div class="flex justify-between items-center h-full px-4 sm:px-8 max-w-7xl mx-auto">
@@ -95,7 +96,7 @@
   </div>
 </nav>
 
-<main class="flex-grow pt-[72px]">
+<main id="main-content" class="flex-grow pt-[72px]">
   <div class="max-w-3xl mx-auto px-6 py-16">
     <h1 class="text-3xl md:text-4xl font-bold text-[#0B1F3A] mb-3">Privacy Policy</h1>
     <p class="text-slate-500 mb-10 text-sm">Last updated: May 2025</p>
@@ -273,6 +274,10 @@
     background-color: #25D366;
     opacity: 0;
     animation: wa-pulse 3s ease-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .wa-pulse-ring { animation: none; }
+    .wa-float { transition: none; }
   }
   .wa-tooltip {
     position: absolute;

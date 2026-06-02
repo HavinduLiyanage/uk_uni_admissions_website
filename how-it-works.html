@@ -206,6 +206,7 @@
     </script>
 </head>
 <body class="bg-background text-on-background font-body-md text-body-md antialiased pt-20">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[9999] focus:bg-secondary focus:text-white focus:px-4 focus:py-2 focus:rounded-lg focus:font-label-bold focus:text-sm" id="skip-to-main">Skip to main content</a>
 <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/50 shadow-sm h-[72px]" style="font-family:Manrope,sans-serif;">
   <div class="flex justify-between items-center h-full px-4 sm:px-8 max-w-7xl mx-auto">
     <a href="index.html" class="flex items-center shrink-0" aria-label="UK Uni Admissions home">
@@ -223,7 +224,7 @@
       Book Free Consultation
     </a>
     <!-- Mobile menu button (decorative) -->
-    <button class="lg:hidden text-[#0B1F3A]" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+    <button class="lg:hidden text-[#0B1F3A] p-2 min-w-[44px] min-h-[44px] flex items-center justify-center rounded-lg hover:bg-slate-100 transition-colors" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="mobile-menu" onclick="var m=document.getElementById('mobile-menu');var open=!m.classList.contains('hidden');m.classList.toggle('hidden');this.setAttribute('aria-expanded',String(!open));">
       <span class="material-symbols-outlined text-3xl">menu</span>
     </button>
   </div>
@@ -248,7 +249,7 @@
 <div style="padding-top:72px"></div>
 <!-- TopAppBar Shared Component -->
 
-<main>
+<main id="main-content">
 <!-- Hero Section -->
 <section class="relative pt-32 pb-24 px-8 max-w-container-max mx-auto text-center">
 <div class="absolute inset-0 -z-10 bg-[url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')] bg-cover bg-center opacity-5" data-alt="abstract architectural lines of modern university building representing structure and process"></div>
@@ -639,6 +640,10 @@
     background-color: #25D366;
     opacity: 0;
     animation: wa-pulse 3s ease-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .wa-pulse-ring { animation: none; }
+    .wa-float { transition: none; }
   }
   .wa-tooltip {
     position: absolute;
