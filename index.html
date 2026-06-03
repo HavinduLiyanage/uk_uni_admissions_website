@@ -175,20 +175,15 @@
         .testimonials-section {
           position: relative;
           overflow: hidden;
-          background:
-            radial-gradient(circle at 10% 12%, rgba(15, 159, 143, 0.14), transparent 28rem),
-            radial-gradient(circle at 88% 18%, rgba(11, 31, 58, 0.08), transparent 24rem),
-            linear-gradient(180deg, #ffffff 0%, #f7fbfb 100%);
+          padding-top: 96px;
+          padding-bottom: 96px;
+          background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
         }
         .testimonials-section::before {
           content: "";
           position: absolute;
           inset: 0;
-          background-image:
-            linear-gradient(rgba(11, 31, 58, 0.035) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(11, 31, 58, 0.035) 1px, transparent 1px);
-          background-size: 44px 44px;
-          mask-image: linear-gradient(to bottom, transparent, black 18%, black 78%, transparent);
+          background: radial-gradient(circle at 50% 0%, rgba(15, 159, 143, 0.08), transparent 34rem);
           pointer-events: none;
         }
         .testimonials-shell {
@@ -199,62 +194,50 @@
           display: inline-flex;
           align-items: center;
           gap: 0.5rem;
-          border: 1px solid rgba(15, 159, 143, 0.22);
+          border: 1px solid rgba(15, 159, 143, 0.18);
           border-radius: 999px;
-          background: rgba(255, 255, 255, 0.8);
+          background: #ffffff;
           color: #0f766e;
           font-size: 0.75rem;
           font-weight: 800;
           letter-spacing: 0.14em;
           padding: 0.5rem 0.9rem;
           text-transform: uppercase;
-          box-shadow: 0 14px 35px rgba(11, 31, 58, 0.06);
+        }
+        .testimonials-grid {
+          display: grid;
+          grid-template-columns: repeat(1, minmax(0, 1fr));
+          gap: 1.5rem;
+          max-width: 1110px;
+          margin: 0 auto;
         }
         .testimonial-card {
-          position: relative;
           display: flex;
-          min-height: 100%;
+          min-height: 380px;
           flex-direction: column;
-          gap: 1.35rem;
-          border: 1px solid rgba(148, 163, 184, 0.22);
-          border-radius: 28px;
-          background: rgba(255, 255, 255, 0.9);
-          padding: 1.6rem;
-          box-shadow: 0 22px 55px rgba(11, 31, 58, 0.08);
+          border: 1px solid rgba(226, 232, 240, 0.95);
+          border-radius: 22px;
+          background: #ffffff;
+          padding: 2rem;
+          box-shadow: 0 18px 45px rgba(11, 31, 58, 0.04);
           transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
         }
-        .testimonial-card::after {
-          content: "";
-          position: absolute;
-          inset: 0;
-          border-radius: inherit;
-          background: linear-gradient(135deg, rgba(15, 159, 143, 0.1), transparent 36%);
-          pointer-events: none;
-        }
         .testimonial-card:hover {
-          transform: translateY(-6px);
-          border-color: rgba(15, 159, 143, 0.38);
-          box-shadow: 0 28px 70px rgba(11, 31, 58, 0.12);
+          transform: translateY(-3px);
+          border-color: rgba(15, 159, 143, 0.24);
+          box-shadow: 0 22px 54px rgba(11, 31, 58, 0.08);
         }
-        .testimonial-card > * {
-          position: relative;
-          z-index: 1;
-        }
-        .testimonial-card-featured {
-          background: #0b1f3a;
-          color: #ffffff;
-          box-shadow: 0 30px 75px rgba(11, 31, 58, 0.2);
-        }
-        .testimonial-card-featured::after {
-          background:
-            radial-gradient(circle at 15% 12%, rgba(15, 159, 143, 0.42), transparent 14rem),
-            linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 40%);
+        .testimonial-card-top {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
         }
         .testimonial-badge {
           display: inline-flex;
           align-items: center;
           gap: 0.4rem;
           width: fit-content;
+          margin-top: 0.45rem;
           border-radius: 999px;
           background: #ecfdf5;
           color: #047857;
@@ -262,39 +245,48 @@
           font-weight: 800;
           padding: 0.45rem 0.75rem;
         }
-        .testimonial-card-featured .testimonial-badge {
-          background: rgba(236, 253, 245, 0.14);
-          color: #bbf7d0;
-          border: 1px solid rgba(187, 247, 208, 0.3);
-        }
         .testimonial-avatar {
           display: grid;
           place-items: center;
-          width: 3.35rem;
-          height: 3.35rem;
+          width: 3.25rem;
+          height: 3.25rem;
           flex: none;
-          border-radius: 1.15rem;
-          background: linear-gradient(135deg, #0f9f8f, #0b1f3a);
+          border-radius: 999px;
+          background: #1e50d2;
           color: #ffffff;
           font-weight: 800;
-          box-shadow: 0 14px 28px rgba(15, 159, 143, 0.22);
         }
-        .testimonial-card-featured .testimonial-avatar {
-          background: #ffffff;
+        .testimonial-student {
+          font-size: 1.35rem;
+          font-weight: 800;
+          line-height: 1.15;
           color: #0b1f3a;
         }
-        .testimonial-meta-grid {
+        .testimonial-divider {
+          height: 1px;
+          margin: 1.6rem 0;
+          background: #e5e7eb;
+        }
+        .testimonial-details {
           display: grid;
-          gap: 0.8rem;
-          grid-template-columns: 1fr;
+          gap: 1rem;
         }
-        .testimonial-meta-item {
-          border-radius: 18px;
-          background: rgba(241, 245, 249, 0.8);
-          padding: 0.9rem;
+        .testimonial-label {
+          margin-bottom: 0.35rem;
+          color: #334155;
+          font-size: 0.75rem;
+          font-weight: 800;
+          letter-spacing: 0.16em;
+          text-transform: uppercase;
         }
-        .testimonial-card-featured .testimonial-meta-item {
-          background: rgba(255, 255, 255, 0.09);
+        .testimonial-value {
+          color: #020617;
+          font-size: 1rem;
+          font-weight: 700;
+          line-height: 1.45;
+        }
+        .testimonial-value-university {
+          color: #1e50d2;
         }
         .testimonials-cta {
           display: inline-flex;
@@ -303,32 +295,27 @@
           gap: 0.5rem;
           min-height: 3rem;
           border-radius: 999px;
-          background: #0f9f8f;
-          color: #ffffff;
+          border: 1px solid rgba(15, 159, 143, 0.2);
+          background: #ffffff;
+          color: #0f766e;
           font-size: 0.875rem;
           font-weight: 800;
           padding: 0.75rem 1.5rem;
-          box-shadow: 0 16px 35px rgba(15, 159, 143, 0.22);
+          box-shadow: 0 12px 28px rgba(11, 31, 58, 0.05);
           transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
         }
         .testimonials-cta:hover {
           transform: translateY(-2px);
-          background: #0d8a7c;
-          box-shadow: 0 20px 42px rgba(15, 159, 143, 0.28);
+          background: #f0fdfa;
+          box-shadow: 0 18px 36px rgba(11, 31, 58, 0.08);
         }
         .testimonials-cta:focus {
           outline: none;
-          box-shadow: 0 0 0 4px rgba(15, 159, 143, 0.24), 0 16px 35px rgba(15, 159, 143, 0.22);
+          box-shadow: 0 0 0 4px rgba(15, 159, 143, 0.22), 0 12px 28px rgba(11, 31, 58, 0.05);
         }
         @media (min-width: 768px) {
-          .testimonial-card {
-            padding: 1.8rem;
-          }
-          .testimonial-card-featured {
-            transform: translateY(-14px);
-          }
-          .testimonial-card-featured:hover {
-            transform: translateY(-20px);
+          .testimonials-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
           }
         }
         @media (prefers-reduced-motion: reduce) {
@@ -336,8 +323,6 @@
           .trust-item.visible { opacity: 1; transform: none; }
           .testimonial-card,
           .testimonial-card:hover,
-          .testimonial-card-featured,
-          .testimonial-card-featured:hover,
           .testimonials-cta,
           .testimonials-cta:hover {
             transform: none;
@@ -741,92 +726,101 @@ Student outcomes
 <h2 class="font-headline-lg text-headline-lg text-primary-container mb-4">What Our Students Say</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Real visa success stories from Sri Lankan students who started their UK journey with UKUniAdmissions.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+<div class="testimonials-grid">
 <!-- Thoshitha Kaduruwewa -->
 <article class="testimonial-card" aria-label="Thoshitha Kaduruwewa success story">
-<div class="flex items-start justify-between gap-4">
+<div class="testimonial-card-top">
 <div class="testimonial-avatar">TK</div>
+<div>
+<h3 class="testimonial-student">Thoshitha Kaduruwewa</h3>
 <div class="testimonial-badge">
 <span class="material-symbols-outlined text-sm" aria-hidden="true">check_circle</span>
 Visa Approved
 </div>
 </div>
+</div>
+<div class="testimonial-divider"></div>
+<div class="testimonial-details">
 <div>
-<p class="font-body-md text-sm font-bold tracking-widest text-secondary uppercase mb-3">Top-up pathway</p>
-<h3 class="font-headline-md text-xl text-primary-container leading-tight mb-3">Bachelor of Computer Science</h3>
-<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">Thoshitha moved from St. Thomas College into a UK computing pathway with a confirmed student visa.</p>
+<p class="testimonial-label">Programme</p>
+<p class="testimonial-value">Bachelor of Computer Science &mdash; Top-up</p>
 </div>
-<div class="testimonial-meta-grid mt-auto">
-<div class="testimonial-meta-item">
-<p class="text-xs font-bold tracking-widest text-on-surface-variant uppercase mb-1">University</p>
-<p class="font-body-md text-sm font-bold text-primary-container">University of Westminster, UK</p>
+<div>
+<p class="testimonial-label">University</p>
+<p class="testimonial-value testimonial-value-university">University of Westminster, UK</p>
 </div>
-<div class="testimonial-meta-item">
-<p class="text-xs font-bold tracking-widest text-on-surface-variant uppercase mb-1">Intake</p>
-<p class="font-body-md text-sm text-primary-container">September 2022 &middot; St. Thomas College</p>
+<div>
+<p class="testimonial-label">Intake</p>
+<p class="testimonial-value">September 2022</p>
 </div>
+<div>
+<p class="testimonial-label">Prior School</p>
+<p class="testimonial-value">St. Thomas College</p>
 </div>
-<div class="flex items-center gap-3 pt-2">
-<span class="h-px flex-1 bg-slate-200"></span>
-<p class="font-label-bold text-sm text-primary-container">Thoshitha Kaduruwewa</p>
 </div>
 </article>
 <!-- Deliesha Gunaratna -->
-<article class="testimonial-card testimonial-card-featured" aria-label="Deliesha Gunaratna success story">
-<div class="flex items-start justify-between gap-4">
+<article class="testimonial-card" aria-label="Deliesha Gunaratna success story">
+<div class="testimonial-card-top">
 <div class="testimonial-avatar">DG</div>
+<div>
+<h3 class="testimonial-student">Deliesha Gunaratna</h3>
 <div class="testimonial-badge">
 <span class="material-symbols-outlined text-sm" aria-hidden="true">check_circle</span>
 Visa Approved
 </div>
 </div>
+</div>
+<div class="testimonial-divider"></div>
+<div class="testimonial-details">
 <div>
-<p class="font-body-md text-sm font-bold tracking-widest uppercase mb-3" style="color:#5eead4;">Featured success</p>
-<h3 class="font-headline-md text-xl leading-tight mb-3 text-white">MSc Finance</h3>
-<p class="font-body-md text-sm leading-relaxed" style="color:rgba(255,255,255,0.78);">Deliesha progressed from Lyceum International School, Nugegoda to a UK finance master's with Oxford Brookes University.</p>
+<p class="testimonial-label">Programme</p>
+<p class="testimonial-value">MSc Finance</p>
 </div>
-<div class="testimonial-meta-grid mt-auto">
-<div class="testimonial-meta-item">
-<p class="text-xs font-bold tracking-widest uppercase mb-1" style="color:rgba(255,255,255,0.58);">University</p>
-<p class="font-body-md text-sm font-bold text-white">Oxford Brookes University, UK</p>
+<div>
+<p class="testimonial-label">University</p>
+<p class="testimonial-value testimonial-value-university">Oxford Brookes University, UK</p>
 </div>
-<div class="testimonial-meta-item">
-<p class="text-xs font-bold tracking-widest uppercase mb-1" style="color:rgba(255,255,255,0.58);">Intake</p>
-<p class="font-body-md text-sm" style="color:rgba(255,255,255,0.86);">September 2022 &middot; Lyceum International School</p>
+<div>
+<p class="testimonial-label">Intake</p>
+<p class="testimonial-value">September 2022</p>
 </div>
+<div>
+<p class="testimonial-label">Prior School</p>
+<p class="testimonial-value">Lyceum International School, Nugegoda</p>
 </div>
-<div class="flex items-center gap-3 pt-2">
-<span class="h-px flex-1" style="background:rgba(255,255,255,0.18);"></span>
-<p class="font-label-bold text-sm text-white">Deliesha Gunaratna</p>
 </div>
 </article>
 <!-- Johsual Thiveniya Sathiyamoorthy -->
 <article class="testimonial-card" aria-label="Johsual Thiveniya Sathiyamoorthy success story">
-<div class="flex items-start justify-between gap-4">
+<div class="testimonial-card-top">
 <div class="testimonial-avatar">JS</div>
+<div>
+<h3 class="testimonial-student">Johsual Thiveniya Sathiyamoorthy</h3>
 <div class="testimonial-badge">
 <span class="material-symbols-outlined text-sm" aria-hidden="true">check_circle</span>
 Visa Approved
 </div>
 </div>
+</div>
+<div class="testimonial-divider"></div>
+<div class="testimonial-details">
 <div>
-<p class="font-body-md text-sm font-bold tracking-widest text-secondary uppercase mb-3">Analytics pathway</p>
-<h3 class="font-headline-md text-xl text-primary-container leading-tight mb-3">MSc Business Analytics</h3>
-<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">Johsual secured a UK study route from St. Bridget's Convent, Colombo 7 to the University of Essex.</p>
+<p class="testimonial-label">Programme</p>
+<p class="testimonial-value">MSc Business Analytics</p>
 </div>
-<div class="testimonial-meta-grid mt-auto">
-<div class="testimonial-meta-item">
-<p class="text-xs font-bold tracking-widest text-on-surface-variant uppercase mb-1">University</p>
-<p class="font-body-md text-sm font-bold text-primary-container">University of Essex, UK</p>
+<div>
+<p class="testimonial-label">University</p>
+<p class="testimonial-value testimonial-value-university">University of Essex, UK</p>
 </div>
-<div class="testimonial-meta-item">
-<p class="text-xs font-bold tracking-widest text-on-surface-variant uppercase mb-1">Intake</p>
-<p class="font-body-md text-sm text-primary-container">Winter 2023 &middot; St. Bridget's Convent</p>
+<div>
+<p class="testimonial-label">Intake</p>
+<p class="testimonial-value">Winter 2023</p>
 </div>
+<div>
+<p class="testimonial-label">Prior School</p>
+<p class="testimonial-value">St. Bridget's Convent, Colombo 7</p>
 </div>
-<div class="flex items-center gap-3 pt-2">
-<span class="h-px flex-1 bg-slate-200"></span>
-<p class="font-label-bold text-sm text-primary-container">Johsual Thiveniya Sathiyamoorthy</p>
 </div>
 </article>
 </div>
