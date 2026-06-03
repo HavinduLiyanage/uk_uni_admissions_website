@@ -60,6 +60,34 @@
 <style>
 
         body { font-family: 'Manrope', sans-serif; }
+        #load-more-wrapper {
+          grid-column: 1 / -1;
+          align-items: stretch;
+          width: 100%;
+        }
+        #load-more-wrapper p {
+          text-align: right;
+        }
+        #load-more-btn {
+          width: 100%;
+          min-height: 44px;
+        }
+        @media (min-width: 640px) {
+          #load-more-wrapper {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+          }
+          #load-more-btn {
+            width: auto;
+            margin-left: auto;
+          }
+        }
+        @media (min-width: 1024px) {
+          #load-more-wrapper {
+            grid-column: 2 / 5;
+          }
+        }
     </style>
 </head>
 <body class="bg-background text-on-background antialiased selection:bg-secondary-fixed selection:text-on-secondary-fixed">
