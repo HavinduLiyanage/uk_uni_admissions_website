@@ -172,9 +172,177 @@
           opacity: 1;
           transform: translateY(0);
         }
+        .testimonials-section {
+          position: relative;
+          overflow: hidden;
+          background:
+            radial-gradient(circle at 10% 12%, rgba(15, 159, 143, 0.14), transparent 28rem),
+            radial-gradient(circle at 88% 18%, rgba(11, 31, 58, 0.08), transparent 24rem),
+            linear-gradient(180deg, #ffffff 0%, #f7fbfb 100%);
+        }
+        .testimonials-section::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background-image:
+            linear-gradient(rgba(11, 31, 58, 0.035) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(11, 31, 58, 0.035) 1px, transparent 1px);
+          background-size: 44px 44px;
+          mask-image: linear-gradient(to bottom, transparent, black 18%, black 78%, transparent);
+          pointer-events: none;
+        }
+        .testimonials-shell {
+          position: relative;
+          z-index: 1;
+        }
+        .testimonials-kicker {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.5rem;
+          border: 1px solid rgba(15, 159, 143, 0.22);
+          border-radius: 999px;
+          background: rgba(255, 255, 255, 0.8);
+          color: #0f766e;
+          font-size: 0.75rem;
+          font-weight: 800;
+          letter-spacing: 0.14em;
+          padding: 0.5rem 0.9rem;
+          text-transform: uppercase;
+          box-shadow: 0 14px 35px rgba(11, 31, 58, 0.06);
+        }
+        .testimonial-card {
+          position: relative;
+          display: flex;
+          min-height: 100%;
+          flex-direction: column;
+          gap: 1.35rem;
+          border: 1px solid rgba(148, 163, 184, 0.22);
+          border-radius: 28px;
+          background: rgba(255, 255, 255, 0.9);
+          padding: 1.6rem;
+          box-shadow: 0 22px 55px rgba(11, 31, 58, 0.08);
+          transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease;
+        }
+        .testimonial-card::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          border-radius: inherit;
+          background: linear-gradient(135deg, rgba(15, 159, 143, 0.1), transparent 36%);
+          pointer-events: none;
+        }
+        .testimonial-card:hover {
+          transform: translateY(-6px);
+          border-color: rgba(15, 159, 143, 0.38);
+          box-shadow: 0 28px 70px rgba(11, 31, 58, 0.12);
+        }
+        .testimonial-card > * {
+          position: relative;
+          z-index: 1;
+        }
+        .testimonial-card-featured {
+          background: #0b1f3a;
+          color: #ffffff;
+          box-shadow: 0 30px 75px rgba(11, 31, 58, 0.2);
+        }
+        .testimonial-card-featured::after {
+          background:
+            radial-gradient(circle at 15% 12%, rgba(15, 159, 143, 0.42), transparent 14rem),
+            linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent 40%);
+        }
+        .testimonial-badge {
+          display: inline-flex;
+          align-items: center;
+          gap: 0.4rem;
+          width: fit-content;
+          border-radius: 999px;
+          background: #ecfdf5;
+          color: #047857;
+          font-size: 0.75rem;
+          font-weight: 800;
+          padding: 0.45rem 0.75rem;
+        }
+        .testimonial-card-featured .testimonial-badge {
+          background: rgba(236, 253, 245, 0.14);
+          color: #bbf7d0;
+          border: 1px solid rgba(187, 247, 208, 0.3);
+        }
+        .testimonial-avatar {
+          display: grid;
+          place-items: center;
+          width: 3.35rem;
+          height: 3.35rem;
+          flex: none;
+          border-radius: 1.15rem;
+          background: linear-gradient(135deg, #0f9f8f, #0b1f3a);
+          color: #ffffff;
+          font-weight: 800;
+          box-shadow: 0 14px 28px rgba(15, 159, 143, 0.22);
+        }
+        .testimonial-card-featured .testimonial-avatar {
+          background: #ffffff;
+          color: #0b1f3a;
+        }
+        .testimonial-meta-grid {
+          display: grid;
+          gap: 0.8rem;
+          grid-template-columns: 1fr;
+        }
+        .testimonial-meta-item {
+          border-radius: 18px;
+          background: rgba(241, 245, 249, 0.8);
+          padding: 0.9rem;
+        }
+        .testimonial-card-featured .testimonial-meta-item {
+          background: rgba(255, 255, 255, 0.09);
+        }
+        .testimonials-cta {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+          min-height: 3rem;
+          border-radius: 999px;
+          background: #0f9f8f;
+          color: #ffffff;
+          font-size: 0.875rem;
+          font-weight: 800;
+          padding: 0.75rem 1.5rem;
+          box-shadow: 0 16px 35px rgba(15, 159, 143, 0.22);
+          transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
+        }
+        .testimonials-cta:hover {
+          transform: translateY(-2px);
+          background: #0d8a7c;
+          box-shadow: 0 20px 42px rgba(15, 159, 143, 0.28);
+        }
+        .testimonials-cta:focus {
+          outline: none;
+          box-shadow: 0 0 0 4px rgba(15, 159, 143, 0.24), 0 16px 35px rgba(15, 159, 143, 0.22);
+        }
+        @media (min-width: 768px) {
+          .testimonial-card {
+            padding: 1.8rem;
+          }
+          .testimonial-card-featured {
+            transform: translateY(-14px);
+          }
+          .testimonial-card-featured:hover {
+            transform: translateY(-20px);
+          }
+        }
         @media (prefers-reduced-motion: reduce) {
           .trust-item { opacity: 1; transform: none; transition: none; }
           .trust-item.visible { opacity: 1; transform: none; }
+          .testimonial-card,
+          .testimonial-card:hover,
+          .testimonial-card-featured,
+          .testimonial-card-featured:hover,
+          .testimonials-cta,
+          .testimonials-cta:hover {
+            transform: none;
+            transition: none;
+          }
         }
       </style>
 </head>
@@ -362,7 +530,7 @@
 <div>
 <p class="font-label-bold text-label-bold text-on-surface">End-to-End Support</p>
 <p class="font-body-md text-xs text-on-surface-variant mt-0.5 max-w-[160px]">
-      From shortlisting to your offer letter â€”
+      From shortlisting to your offer letter &mdash;
       we handle it all.
     </p>
 </div>
@@ -563,71 +731,108 @@
 </div>
 </section>
 <!-- Testimonials -->
-<section class="py-section-gap bg-white border-t border-slate-100">
-<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-<div class="text-center mb-12">
+<section class="testimonials-section py-section-gap border-t border-slate-100">
+<div class="testimonials-shell max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-14">
+<div class="testimonials-kicker mb-5">
+<span class="material-symbols-outlined text-base" aria-hidden="true">verified</span>
+Student outcomes
+</div>
 <h2 class="font-headline-lg text-headline-lg text-primary-container mb-4">What Our Students Say</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Real stories from Sri Lankan students who started their UK journey with UKUniAdmissions.</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Real visa success stories from Sri Lankan students who started their UK journey with UKUniAdmissions.</p>
 </div>
-<div class=”grid grid-cols-1 md:grid-cols-3 gap-8”>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
 <!-- Thoshitha Kaduruwewa -->
-<div class=”bg-surface-container-lowest rounded-[24px] p-8 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col gap-5 relative”>
-<div class=”inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-50 text-green-700 text-xs font-bold w-fit”>
-<span class=”material-symbols-outlined text-sm”>check_circle</span> Visa Approved
+<article class="testimonial-card" aria-label="Thoshitha Kaduruwewa success story">
+<div class="flex items-start justify-between gap-4">
+<div class="testimonial-avatar">TK</div>
+<div class="testimonial-badge">
+<span class="material-symbols-outlined text-sm" aria-hidden="true">check_circle</span>
+Visa Approved
 </div>
-<div class=”flex-1 space-y-2”>
-<p class=”font-body-md font-semibold text-primary-container text-sm leading-snug”>Bachelor of Computer Science &mdash; Top-up</p>
-<p class=”font-body-md text-sm text-secondary font-medium”>University of Westminster, UK</p>
-<p class=”text-xs text-on-surface-variant”>September 2022 &middot; St. Thomas College</p>
 </div>
-<div class=”flex items-center gap-4 pt-4 border-t border-slate-100”>
-<div class=”w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-secondary”>TK</div>
 <div>
-<p class=”font-label-bold text-sm text-primary-container”>Thoshitha Kaduruwewa</p>
-<p class=”font-body-md text-xs text-on-surface-variant”>University of Westminster, UK</p>
+<p class="font-body-md text-sm font-bold tracking-widest text-secondary uppercase mb-3">Top-up pathway</p>
+<h3 class="font-headline-md text-xl text-primary-container leading-tight mb-3">Bachelor of Computer Science</h3>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">Thoshitha moved from St. Thomas College into a UK computing pathway with a confirmed student visa.</p>
+</div>
+<div class="testimonial-meta-grid mt-auto">
+<div class="testimonial-meta-item">
+<p class="text-xs font-bold tracking-widest text-on-surface-variant uppercase mb-1">University</p>
+<p class="font-body-md text-sm font-bold text-primary-container">University of Westminster, UK</p>
+</div>
+<div class="testimonial-meta-item">
+<p class="text-xs font-bold tracking-widest text-on-surface-variant uppercase mb-1">Intake</p>
+<p class="font-body-md text-sm text-primary-container">September 2022 &middot; St. Thomas College</p>
 </div>
 </div>
+<div class="flex items-center gap-3 pt-2">
+<span class="h-px flex-1 bg-slate-200"></span>
+<p class="font-label-bold text-sm text-primary-container">Thoshitha Kaduruwewa</p>
 </div>
+</article>
 <!-- Deliesha Gunaratna -->
-<div class=”bg-surface-container-lowest rounded-[24px] p-8 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col gap-5 relative”>
-<div class=”inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-50 text-green-700 text-xs font-bold w-fit”>
-<span class=”material-symbols-outlined text-sm”>check_circle</span> Visa Approved
+<article class="testimonial-card testimonial-card-featured" aria-label="Deliesha Gunaratna success story">
+<div class="flex items-start justify-between gap-4">
+<div class="testimonial-avatar">DG</div>
+<div class="testimonial-badge">
+<span class="material-symbols-outlined text-sm" aria-hidden="true">check_circle</span>
+Visa Approved
 </div>
-<div class=”flex-1 space-y-2”>
-<p class=”font-body-md font-semibold text-primary-container text-sm leading-snug”>MSc Finance</p>
-<p class=”font-body-md text-sm text-secondary font-medium”>Oxford Brookes University, UK</p>
-<p class=”text-xs text-on-surface-variant”>September 2022 &middot; Lyceum International School, Nugegoda</p>
 </div>
-<div class=”flex items-center gap-4 pt-4 border-t border-slate-100”>
-<div class=”w-12 h-12 bg-[#0F9F8F]/10 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-[#0F9F8F]”>DG</div>
 <div>
-<p class=”font-label-bold text-sm text-primary-container”>Deliesha Gunaratna</p>
-<p class=”font-body-md text-xs text-on-surface-variant”>Oxford Brookes University, UK</p>
+<p class="font-body-md text-sm font-bold tracking-widest uppercase mb-3" style="color:#5eead4;">Featured success</p>
+<h3 class="font-headline-md text-xl leading-tight mb-3 text-white">MSc Finance</h3>
+<p class="font-body-md text-sm leading-relaxed" style="color:rgba(255,255,255,0.78);">Deliesha progressed from Lyceum International School, Nugegoda to a UK finance master's with Oxford Brookes University.</p>
+</div>
+<div class="testimonial-meta-grid mt-auto">
+<div class="testimonial-meta-item">
+<p class="text-xs font-bold tracking-widest uppercase mb-1" style="color:rgba(255,255,255,0.58);">University</p>
+<p class="font-body-md text-sm font-bold text-white">Oxford Brookes University, UK</p>
+</div>
+<div class="testimonial-meta-item">
+<p class="text-xs font-bold tracking-widest uppercase mb-1" style="color:rgba(255,255,255,0.58);">Intake</p>
+<p class="font-body-md text-sm" style="color:rgba(255,255,255,0.86);">September 2022 &middot; Lyceum International School</p>
 </div>
 </div>
+<div class="flex items-center gap-3 pt-2">
+<span class="h-px flex-1" style="background:rgba(255,255,255,0.18);"></span>
+<p class="font-label-bold text-sm text-white">Deliesha Gunaratna</p>
 </div>
+</article>
 <!-- Johsual Thiveniya Sathiyamoorthy -->
-<div class=”bg-surface-container-lowest rounded-[24px] p-8 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col gap-5 relative”>
-<div class=”inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-50 text-green-700 text-xs font-bold w-fit”>
-<span class=”material-symbols-outlined text-sm”>check_circle</span> Visa Approved
+<article class="testimonial-card" aria-label="Johsual Thiveniya Sathiyamoorthy success story">
+<div class="flex items-start justify-between gap-4">
+<div class="testimonial-avatar">JS</div>
+<div class="testimonial-badge">
+<span class="material-symbols-outlined text-sm" aria-hidden="true">check_circle</span>
+Visa Approved
 </div>
-<div class=”flex-1 space-y-2”>
-<p class=”font-body-md font-semibold text-primary-container text-sm leading-snug”>MSc Business Analytics</p>
-<p class=”font-body-md text-sm text-secondary font-medium”>University of Essex, UK</p>
-<p class=”text-xs text-on-surface-variant”>Winter 2023 &middot; St. Bridget's Convent, Colombo 7</p>
 </div>
-<div class=”flex items-center gap-4 pt-4 border-t border-slate-100”>
-<div class=”w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-secondary”>JS</div>
 <div>
-<p class=”font-label-bold text-sm text-primary-container”>Johsual Thiveniya Sathiyamoorthy</p>
-<p class=”font-body-md text-xs text-on-surface-variant”>University of Essex, UK</p>
+<p class="font-body-md text-sm font-bold tracking-widest text-secondary uppercase mb-3">Analytics pathway</p>
+<h3 class="font-headline-md text-xl text-primary-container leading-tight mb-3">MSc Business Analytics</h3>
+<p class="font-body-md text-sm text-on-surface-variant leading-relaxed">Johsual secured a UK study route from St. Bridget's Convent, Colombo 7 to the University of Essex.</p>
+</div>
+<div class="testimonial-meta-grid mt-auto">
+<div class="testimonial-meta-item">
+<p class="text-xs font-bold tracking-widest text-on-surface-variant uppercase mb-1">University</p>
+<p class="font-body-md text-sm font-bold text-primary-container">University of Essex, UK</p>
+</div>
+<div class="testimonial-meta-item">
+<p class="text-xs font-bold tracking-widest text-on-surface-variant uppercase mb-1">Intake</p>
+<p class="font-body-md text-sm text-primary-container">Winter 2023 &middot; St. Bridget's Convent</p>
 </div>
 </div>
+<div class="flex items-center gap-3 pt-2">
+<span class="h-px flex-1 bg-slate-200"></span>
+<p class="font-label-bold text-sm text-primary-container">Johsual Thiveniya Sathiyamoorthy</p>
 </div>
+</article>
 </div>
-<div class="text-center mt-10">
-<a href="success-stories.html" class="inline-flex items-center gap-2 font-label-bold text-label-bold text-secondary hover:underline">
-View More Success Stories <span class="material-symbols-outlined text-sm">arrow_forward</span>
+<div class="text-center mt-12">
+<a href="success-stories.html" class="testimonials-cta">
+View More Success Stories <span class="material-symbols-outlined text-sm" aria-hidden="true">arrow_forward</span>
 </a>
 </div>
 </div>
@@ -826,7 +1031,7 @@ Can you help after I receive an offer?
         <img loading="lazy" src="assets/ukuni-admissions-logo.png" alt="UK Uni Admissions" class="h-9 w-auto object-contain" width="270" height="90"/>
       </a>
       <p class="text-slate-400 mb-6 leading-relaxed">Expert guidance for Sri Lankan students applying to UK universities.</p>
-      <p class="text-xs text-slate-500">Â© 2025 UK Uni Admissions.</p>
+      <p class="text-xs text-slate-500">&copy; 2025 UK Uni Admissions.</p>
     </div>
     <div>
       <h3 class="text-white font-semibold mb-4 text-base">Quick Links</h3>
