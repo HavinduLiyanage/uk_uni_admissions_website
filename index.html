@@ -9,6 +9,12 @@
 <meta name="robots" content="index, follow"/>
 <meta name="author" content="UK Uni Admissions"/>
 <meta name="theme-color" content="#0B1F3A"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""/>
+<link rel="preload" href="assets/uk-oxford.jpg" as="image" fetchpriority="high"/>
+<link rel="preload" href="assets/uk-bigben.jpg" as="image"/>
+<link rel="preload" href="assets/ukuni-admissions-logo.png" as="image"/>
 <link rel="canonical" href="https://ukadmissions.co.uk/"/>
 <meta property="og:type" content="website"/>
 <meta property="og:site_name" content="UK Uni Admissions"/>
@@ -51,6 +57,9 @@
   "description": "Free UK university admissions guidance for Sri Lankan students.",
   "address": {
     "@type": "PostalAddress",
+    "streetAddress": "[PLACEHOLDER: street address]",
+    "addressLocality": "Colombo",
+    "postalCode": "[PLACEHOLDER: postal code]",
     "addressCountry": "LK"
   },
   "areaServed": "LK",
@@ -97,150 +106,11 @@
   ]
 }
 </script>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="mobile.css" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-          darkMode: "class",
-          theme: {
-            extend: {
-              "colors": {
-                      "surface-container": "#efedf0",
-                      "secondary-fixed": "#dce1ff",
-                      "secondary-container": "#406bec",
-                      "inverse-surface": "#303033",
-                      "primary-fixed": "#d6e3ff",
-                      "on-secondary-fixed": "#00164f",
-                      "surface-variant": "#e4e2e5",
-                      "on-tertiary-fixed": "#2e1500",
-                      "surface": "#fbf9fb",
-                      "surface-container-low": "#f5f3f6",
-                      "surface-container-highest": "#e4e2e5",
-                      "error": "#ba1a1a",
-                      "on-surface-variant": "#44474d",
-                      "tertiary-fixed-dim": "#eebd94",
-                      "background": "#fbf9fb",
-                      "on-tertiary": "#ffffff",
-                      "surface-container-high": "#e9e7ea",
-                      "on-secondary-container": "#fffbff",
-                      "surface-bright": "#fbf9fb",
-                      "on-error-container": "#93000a",
-                      "inverse-primary": "#b5c7ea",
-                      "surface-tint": "#4d5f7d",
-                      "inverse-on-surface": "#f2f0f3",
-                      "surface-container-lowest": "#ffffff",
-                      "outline": "#75777e",
-                      "on-tertiary-container": "#a87e59",
-                      "on-background": "#1b1b1e",
-                      "outline-variant": "#c4c6ce",
-                      "error-container": "#ffdad6",
-                      "on-secondary": "#ffffff",
-                      "secondary": "#1e50d2",
-                      "on-tertiary-fixed-variant": "#613f20",
-                      "surface-dim": "#dbd9dc",
-                      "on-primary-container": "#7587a7",
-                      "on-primary-fixed-variant": "#364764",
-                      "primary-fixed-dim": "#b5c7ea",
-                      "primary-container": "#0b1f3a",
-                      "secondary-fixed-dim": "#b6c4ff",
-                      "on-surface": "#1b1b1e",
-                      "on-secondary-fixed-variant": "#003ab1",
-                      "primary": "#000615",
-                      "tertiary-container": "#321800",
-                      "tertiary": "#0d0400",
-                      "tertiary-fixed": "#ffdcc1",
-                      "on-primary-fixed": "#071c36",
-                      "on-error": "#ffffff",
-                      "on-primary": "#ffffff"
-              },
-              "borderRadius": {
-                      "DEFAULT": "0.25rem",
-                      "lg": "0.5rem",
-                      "xl": "0.75rem",
-                      "full": "9999px"
-              },
-              "spacing": {
-                      "element-gap": "24px",
-                      "unit": "8px",
-                      "margin-mobile": "16px",
-                      "section-gap": "120px",
-                      "gutter": "24px",
-                      "margin-desktop": "48px",
-                      "container-max": "1280px"
-              },
-                                                        "fontFamily": {
-                      "body-md": [
-                              "Manrope"
-                      ],
-                      "display-lg": [
-                              "Manrope"
-                      ],
-                      "body-lg": [
-                              "Manrope"
-                      ],
-                      "headline-md": [
-                              "Manrope"
-                      ],
-                      "headline-lg": [
-                              "Manrope"
-                      ],
-                      "label-bold": [
-                              "Manrope"
-                      ]
-              },
-              "fontSize": {
-                      "body-md": [
-                              "16px",
-                              {
-                                      "lineHeight": "1.5",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "display-lg": [
-                              "56px",
-                              {
-                                      "lineHeight": "1.1",
-                                      "letterSpacing": "-0.02em",
-                                      "fontWeight": "800"
-                              }
-                      ],
-                      "body-lg": [
-                              "18px",
-                              {
-                                      "lineHeight": "1.6",
-                                      "fontWeight": "400"
-                              }
-                      ],
-                      "headline-md": [
-                              "28px",
-                              {
-                                      "lineHeight": "1.3",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "headline-lg": [
-                              "40px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "letterSpacing": "-0.01em",
-                                      "fontWeight": "700"
-                              }
-                      ],
-                      "label-bold": [
-                              "14px",
-                              {
-                                      "lineHeight": "1.2",
-                                      "letterSpacing": "0.05em",
-                                      "fontWeight": "700"
-                              }
-                      ]
-              }
-      },
-          },
-        }
-      </script>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/></noscript>
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+<noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/></noscript>
+<link rel="stylesheet" href="tailwind.css" integrity="sha384-SohHQBbkyCgaPa59dKF78HrX7Nd+NXsWvFKi3QMbgnPdQVjsXGtsgRasOMXV9efP" crossorigin="anonymous"/><link href="mobile.css" rel="stylesheet"/>
 <style>
         .uk-geometry {
             background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 10 L90 90 M90 10 L10 90' stroke='rgba(11, 31, 58, 0.02)' stroke-width='1' fill='none'/%3E%3C/svg%3E"), 
@@ -313,7 +183,7 @@
 <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md border-b border-slate-200/50 shadow-sm h-[72px]" style="font-family:Manrope,sans-serif;">
   <div class="flex justify-between items-center h-full px-4 sm:px-8 max-w-7xl mx-auto">
     <a href="index.html" class="flex items-center shrink-0" aria-label="UK Uni Admissions home">
-      <img loading="lazy" src="assets/ukuni-admissions-logo.png" alt="UK Uni Admissions" class="h-10 sm:h-11 w-auto object-contain"/>
+      <img src="assets/ukuni-admissions-logo.png" alt="UK Uni Admissions" class="h-10 sm:h-11 w-auto object-contain" width="540" height="180"/>
     </a>
     <div class="hidden lg:flex items-center gap-1 text-sm font-semibold tracking-tight" role="navigation" aria-label="Primary navigation">
       <a href="universities.html" class="text-[#0B1F3A] px-3 py-2 rounded-lg hover:bg-slate-50 hover:text-[#0F9F8F] transition-colors">Universities</a>
@@ -353,7 +223,7 @@
 
 <main id="main-content">
 <!-- Hero Section -->
-<section class="relative md:min-h-[600px] hero-gradient uk-geometry flex items-center pt-10 pb-14 overflow-hidden">
+<section class="relative md:min-h-[600px] hero-gradient uk-geometry flex items-center pt-10 pb-14 overflow-hidden grain-texture">
 <!-- Decorative Accent Shapes -->
 <div class="absolute top-20 right-20 w-64 h-64 bg-blue-400/10 rounded-full blur-3xl z-0 pointer-events-none"></div>
 <div class="absolute bottom-20 left-10 w-96 h-96 bg-teal-400/5 rounded-full blur-3xl z-0 pointer-events-none"></div>
@@ -368,6 +238,10 @@
 <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">verified</span>
 <span class="font-label-bold text-xs uppercase tracking-wider">100% Free for Students</span>
 </div>
+<div class="flex items-center gap-4 mb-2">
+  <div class="h-px w-12 bg-[#0F9F8F]"></div>
+  <span class="text-[#0F9F8F] text-[11px] font-bold uppercase tracking-[0.12em] font-body-md">Expert Admissions Guidance</span>
+</div>
 <h1 class="font-display-lg text-display-lg text-primary-container leading-tight">
     Your UK University <br/>Journey Starts Here
 </h1>
@@ -375,8 +249,9 @@
     Get free, expert guidance to find the right UK university, shortlist suitable programmes, and apply with confidence from Sri Lanka.
 </p>
 <div class="bg-surface p-3 rounded-2xl shadow-[0px_15px_40px_rgba(11,31,58,0.08)] border border-surface-container-high max-w-xl flex gap-3 items-center backdrop-blur-md bg-white/90">
-<span class="material-symbols-outlined text-outline ml-3">search</span>
-<input class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface font-body-md text-body-md placeholder-outline-variant outline-none py-2" placeholder="Search programmes or universities..." type="text"/>
+<span class="material-symbols-outlined text-outline ml-3" aria-hidden="true">search</span>
+<label for="hero-search" class="sr-only">Search programmes or universities</label>
+<input id="hero-search" class="flex-1 bg-transparent border-none focus:ring-0 text-on-surface font-body-md text-body-md placeholder-outline-variant outline-none py-2" placeholder="Search programmes or universities..." type="text"/>
 <button class="bg-secondary text-white px-4 sm:px-8 py-3 rounded-xl font-label-bold text-label-bold hover:opacity-90 transition-opacity shadow-md" onclick="window.location='programmes.html'">Search</button>
 </div>
 <div class="flex flex-col sm:flex-row flex-wrap gap-4 pt-6">
@@ -392,16 +267,16 @@
 <div class="relative hidden lg:block">
 <div class="relative z-10">
 <div class="grid grid-cols-2 gap-3 h-[580px] rounded-[2rem] overflow-hidden shadow-2xl ring-1 ring-black/5">
-<img fetchpriority="high" src="assets/uk-oxford.jpg" alt="Oxford University" class="w-full h-full object-cover rounded-tl-[2rem]"/>
-<img loading="lazy" src="assets/uk-bigben.jpg" alt="Westminster Bridge London" class="w-full h-full object-cover rounded-tr-[2rem]"/>
-<img loading="lazy" src="assets/uk-castle.jpg" alt="UK Edinburgh castle" class="w-full h-full object-cover rounded-bl-[2rem]"/>
-<img loading="lazy" src="assets/uk-henge.jpg" alt="Stone Henge" class="w-full h-full object-cover rounded-br-[2rem]"/>
+<img fetchpriority="high" src="assets/uk-oxford.jpg" alt="Oxford University" class="w-full h-full object-cover rounded-tl-[2rem]" width="1400" height="805"/>
+<img src="assets/uk-bigben.jpg" alt="Westminster Bridge London" class="w-full h-full object-cover rounded-tr-[2rem]" width="1400" height="935"/>
+<img loading="lazy" src="assets/uk-castle.jpg" alt="UK Edinburgh castle" class="w-full h-full object-cover rounded-bl-[2rem]" width="1400" height="787"/>
+<img loading="lazy" src="assets/uk-henge.jpg" alt="Stone Henge" class="w-full h-full object-cover rounded-br-[2rem]" width="1400" height="875"/>
 </div>
 <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-[2rem] pointer-events-none">
 </div>
 </div>
 <!-- Floating Cards -->
-<div class="absolute -left-16 top-32 bg-white/95 backdrop-blur p-4 rounded-2xl shadow-[0px_15px_40px_rgba(11,31,58,0.12)] z-20 flex items-center gap-4 animate-[bounce_4s_ease-in-out_infinite] border border-white/20">
+<div class="float-card absolute -left-16 top-32 p-4 z-20 flex items-center gap-4 animate-[bounce_4s_ease-in-out_infinite]">
 <div class="w-14 h-14 bg-secondary-fixed rounded-2xl flex items-center justify-center shadow-inner">
 <span class="material-symbols-outlined text-secondary text-2xl">workspace_premium</span>
 </div>
@@ -410,7 +285,7 @@
 <p class="font-body-md text-sm text-on-surface-variant">of Experience</p>
 </div>
 </div>
-<div class="absolute -right-10 bottom-40 bg-white/95 backdrop-blur p-4 rounded-2xl shadow-[0px_15px_40px_rgba(11,31,58,0.12)] z-20 flex items-center gap-4 animate-[bounce_5s_ease-in-out_infinite] border border-white/20">
+<div class="float-card absolute -right-10 bottom-40 p-4 z-20 flex items-center gap-4 animate-[bounce_5s_ease-in-out_infinite]">
 <div class="w-14 h-14 bg-[#0F9F8F]/10 rounded-2xl flex items-center justify-center shadow-inner">
 <span class="material-symbols-outlined text-[#0F9F8F] text-2xl">task_alt</span>
 </div>
@@ -587,7 +462,7 @@
 <!-- Programme Card 1 -->
 <div class="bg-white rounded-3xl overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.06)] hover:shadow-[0px_20px_40px_rgba(11,31,58,0.12)] border border-slate-100 hover:-translate-y-1 transition-all duration-300 flex flex-col h-auto md:h-[560px]">
 <div class="relative h-60">
-<img loading="lazy" alt="BSc Computer Science" class="w-full h-full object-cover" src="assets/programmes/bsc-computer-science.jpg"/>
+<img loading="lazy" alt="BSc Computer Science at Coventry University" class="w-full h-full object-cover" src="assets/programmes/bsc-computer-science.jpg" width="512" height="512"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full shadow-sm">
 <span class="font-label-bold text-xs text-[#0B1F3A]">Undergraduate</span>
@@ -612,7 +487,7 @@
 <!-- Programme Card 2 -->
 <div class="bg-white rounded-3xl overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.06)] hover:shadow-[0px_20px_40px_rgba(11,31,58,0.12)] border border-slate-100 hover:-translate-y-1 transition-all duration-300 flex flex-col h-auto md:h-[560px]">
 <div class="relative h-60">
-<img loading="lazy" alt="MSc International Business Management" class="w-full h-full object-cover" src="assets/programmes/msc-international-business.jpg"/>
+<img loading="lazy" alt="MSc International Business Management" class="w-full h-full object-cover" src="assets/programmes/msc-international-business.jpg" width="512" height="512"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full shadow-sm">
 <span class="font-label-bold text-xs text-[#0F9F8F]">Postgraduate</span>
@@ -637,7 +512,7 @@
 <!-- Programme Card 3 -->
 <div class="bg-white rounded-3xl overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.06)] hover:shadow-[0px_20px_40px_rgba(11,31,58,0.12)] border border-slate-100 hover:-translate-y-1 transition-all duration-300 flex flex-col h-auto md:h-[560px]">
 <div class="relative h-60">
-<img loading="lazy" alt="BEng Mechanical Engineering" class="w-full h-full object-cover" src="assets/programmes/beng-mechanical-engineering.jpg"/>
+<img loading="lazy" alt="BEng Mechanical Engineering at Manchester Met" class="w-full h-full object-cover" src="assets/programmes/beng-mechanical-engineering.jpg" width="512" height="512"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full shadow-sm">
 <span class="font-label-bold text-xs text-[#0B1F3A]">Undergraduate</span>
@@ -662,7 +537,7 @@
 <!-- Programme Card 4 -->
 <div class="bg-white rounded-3xl overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.06)] hover:shadow-[0px_20px_40px_rgba(11,31,58,0.12)] border border-slate-100 hover:-translate-y-1 transition-all duration-300 flex flex-col h-auto md:h-[560px]">
 <div class="relative h-60">
-<img loading="lazy" alt="MSc Data Science and AI" class="w-full h-full object-cover" src="assets/programmes/programme-1.jpg"/>
+<img loading="lazy" alt="MSc Data Science and AI" class="w-full h-full object-cover" src="assets/programmes/programme-1.jpg" width="512" height="512"/>
 <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 <div class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full shadow-sm">
 <span class="font-label-bold text-xs text-[#0F9F8F]">Postgraduate</span>
@@ -694,64 +569,58 @@
 <h2 class="font-headline-lg text-headline-lg text-primary-container mb-4">What Our Students Say</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Real stories from Sri Lankan students who started their UK journey with UKUniAdmissions.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<div class="bg-surface-container-lowest rounded-[24px] p-8 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col gap-6 relative">
-<span class="absolute top-6 right-8 text-6xl text-secondary/10 font-serif leading-none select-none">"</span>
-<div class="flex gap-1">
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<div class=”grid grid-cols-1 md:grid-cols-3 gap-8”>
+<!-- Thoshitha Kaduruwewa -->
+<div class=”bg-surface-container-lowest rounded-[24px] p-8 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col gap-5 relative”>
+<div class=”inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-50 text-green-700 text-xs font-bold w-fit”>
+<span class=”material-symbols-outlined text-sm”>check_circle</span> Visa Approved
 </div>
-<p class="font-body-md text-slate-600 text-sm leading-relaxed flex-1">"UKUniAdmissions guided me through every step â€” from choosing the right course to getting my visa approved. I couldn't have done it without their support. Now I'm studying at Coventry University!"</p>
-<div class="flex items-center gap-4 pt-4 border-t border-slate-100">
-<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-secondary text-2xl">person</span>
+<div class=”flex-1 space-y-2”>
+<p class=”font-body-md font-semibold text-primary-container text-sm leading-snug”>Bachelor of Computer Science &mdash; Top-up</p>
+<p class=”font-body-md text-sm text-secondary font-medium”>University of Westminster, UK</p>
+<p class=”text-xs text-on-surface-variant”>September 2022 &middot; St. Thomas College</p>
 </div>
+<div class=”flex items-center gap-4 pt-4 border-t border-slate-100”>
+<div class=”w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-secondary”>TK</div>
 <div>
-<p class="font-label-bold text-sm text-primary-container">Kavinda Perera</p>
-<p class="font-body-md text-xs text-on-surface-variant">MSc Computer Science, Coventry University</p>
+<p class=”font-label-bold text-sm text-primary-container”>Thoshitha Kaduruwewa</p>
+<p class=”font-body-md text-xs text-on-surface-variant”>University of Westminster, UK</p>
 </div>
 </div>
 </div>
-<div class="bg-surface-container-lowest rounded-[24px] p-8 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col gap-6 relative">
-<span class="absolute top-6 right-8 text-6xl text-secondary/10 font-serif leading-none select-none">"</span>
-<div class="flex gap-1">
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<!-- Deliesha Gunaratna -->
+<div class=”bg-surface-container-lowest rounded-[24px] p-8 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col gap-5 relative”>
+<div class=”inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-50 text-green-700 text-xs font-bold w-fit”>
+<span class=”material-symbols-outlined text-sm”>check_circle</span> Visa Approved
 </div>
-<p class="font-body-md text-slate-600 text-sm leading-relaxed flex-1">"The free visa consultation was incredibly helpful. The team knew exactly what documents I needed and my application went smoothly. I'd recommend UKUniAdmissions to any student planning to study in the UK."</p>
-<div class="flex items-center gap-4 pt-4 border-t border-slate-100">
-<div class="w-12 h-12 bg-[#0F9F8F]/10 rounded-full flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-[#0F9F8F] text-2xl">person</span>
+<div class=”flex-1 space-y-2”>
+<p class=”font-body-md font-semibold text-primary-container text-sm leading-snug”>MSc Finance</p>
+<p class=”font-body-md text-sm text-secondary font-medium”>Oxford Brookes University, UK</p>
+<p class=”text-xs text-on-surface-variant”>September 2022 &middot; Lyceum International School, Nugegoda</p>
 </div>
+<div class=”flex items-center gap-4 pt-4 border-t border-slate-100”>
+<div class=”w-12 h-12 bg-[#0F9F8F]/10 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-[#0F9F8F]”>DG</div>
 <div>
-<p class="font-label-bold text-sm text-primary-container">Nimasha Fernando</p>
-<p class="font-body-md text-xs text-on-surface-variant">BA Business Management, University of Greenwich</p>
+<p class=”font-label-bold text-sm text-primary-container”>Deliesha Gunaratna</p>
+<p class=”font-body-md text-xs text-on-surface-variant”>Oxford Brookes University, UK</p>
 </div>
 </div>
 </div>
-<div class="bg-surface-container-lowest rounded-[24px] p-8 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col gap-6 relative">
-<span class="absolute top-6 right-8 text-6xl text-secondary/10 font-serif leading-none select-none">"</span>
-<div class="flex gap-1">
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-[#f59e0b] text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<!-- Johsual Thiveniya Sathiyamoorthy -->
+<div class=”bg-surface-container-lowest rounded-[24px] p-8 shadow-sm border border-slate-100 hover:shadow-md transition-all duration-300 flex flex-col gap-5 relative”>
+<div class=”inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-green-50 text-green-700 text-xs font-bold w-fit”>
+<span class=”material-symbols-outlined text-sm”>check_circle</span> Visa Approved
 </div>
-<p class="font-body-md text-slate-600 text-sm leading-relaxed flex-1">"The counsellors have so much experience â€” they helped me pick the perfect programme and even prepared me for my visa interview. Everything was free and the support was outstanding from start to finish."</p>
-<div class="flex items-center gap-4 pt-4 border-t border-slate-100">
-<div class="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-secondary text-2xl">person</span>
+<div class=”flex-1 space-y-2”>
+<p class=”font-body-md font-semibold text-primary-container text-sm leading-snug”>MSc Business Analytics</p>
+<p class=”font-body-md text-sm text-secondary font-medium”>University of Essex, UK</p>
+<p class=”text-xs text-on-surface-variant”>Winter 2023 &middot; St. Bridget's Convent, Colombo 7</p>
 </div>
+<div class=”flex items-center gap-4 pt-4 border-t border-slate-100”>
+<div class=”w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center shrink-0 font-bold text-sm text-secondary”>JS</div>
 <div>
-<p class="font-label-bold text-sm text-primary-container">Tharindu Jayawardena</p>
-<p class="font-body-md text-xs text-on-surface-variant">BEng Civil Engineering, University of Salford</p>
+<p class=”font-label-bold text-sm text-primary-container”>Johsual Thiveniya Sathiyamoorthy</p>
+<p class=”font-body-md text-xs text-on-surface-variant”>University of Essex, UK</p>
 </div>
 </div>
 </div>
@@ -767,7 +636,7 @@ View More Success Stories <span class="material-symbols-outlined text-sm">arrow_
 <section class="py-section-gap relative bg-surface-container-low overflow-hidden">
 <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PHBhdGggZD0iTTAgMGg0MHY0MEgwem0yMCAyMGMtMi4yIDAtNC0xLjgtNC00czEuOC00IDQtNCA0IDEuOCA0IDRzLTEuOCA0LTQgNHoiIGZpbGw9IiM0MDZiZWMiIGZpbGwtb3BhY2l0eT0iMC4wNSIgZmlsbC1ydWxlPSJldmVub2RkIi8+PC9zdmc+')] opacity-50"></div>
 <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center relative z-10">
-<p class="text-[#0F9F8F] text-[11px] font-bold uppercase tracking-[0.1em] mb-3 font-body-md">Your Journey</p>
+<p class="section-label mb-3">Your Journey</p>
 <h2 class="font-headline-lg text-headline-lg text-primary-container mb-4">How It Works</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-16">A simple, fully guided process from browsing programmes to receiving your university offer &mdash; completely free at every step.</p>
 <div class="relative">
@@ -845,10 +714,10 @@ See the full 7-stage process in detail
 </div>
 </section>
 <!-- Stats Counter Section -->
-<section class="stats-section bg-[#0B1F3A] py-16 md:py-20 px-4 md:px-8" id="stats-section">
+<section class="stats-section bg-[#0B1F3A] py-16 md:py-20 px-4 md:px-8 grain-texture" id="stats-section">
 <div class="max-w-container-max mx-auto">
 <div class="text-center mb-12">
-<p class="text-[#0F9F8F] text-[11px] font-bold uppercase tracking-[0.1em] mb-3 font-body-md">By The Numbers</p>
+<p class="section-label mb-3">By The Numbers</p>
 <h2 class="font-headline-lg text-headline-lg text-white">Trusted by Sri Lankan students applying to UK universities</h2>
 </div>
 <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
@@ -881,7 +750,7 @@ See the full 7-stage process in detail
 <section class="py-section-gap bg-surface-container-low">
 <div class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop">
 <div class="text-center mb-12">
-<p class="text-[#0F9F8F] text-[11px] font-bold uppercase tracking-[0.1em] mb-3 font-body-md">Common Questions</p>
+<p class="section-label mb-3">Common Questions</p>
 <h2 class="font-headline-lg text-headline-lg text-primary-container mb-4">Frequently Asked Questions</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant">Clear answers before you submit an enquiry.</p>
 </div>
@@ -954,13 +823,13 @@ Can you help after I receive an offer?
   <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto text-slate-300 text-sm">
     <div>
       <a href="index.html" class="inline-flex items-center bg-white rounded-md px-3 py-2 mb-4" aria-label="UK Uni Admissions home">
-        <img loading="lazy" src="assets/ukuni-admissions-logo.png" alt="UK Uni Admissions" class="h-9 w-auto object-contain"/>
+        <img loading="lazy" src="assets/ukuni-admissions-logo.png" alt="UK Uni Admissions" class="h-9 w-auto object-contain" width="270" height="90"/>
       </a>
       <p class="text-slate-400 mb-6 leading-relaxed">Expert guidance for Sri Lankan students applying to UK universities.</p>
       <p class="text-xs text-slate-500">Â© 2025 UK Uni Admissions.</p>
     </div>
     <div>
-      <h4 class="text-white font-semibold mb-4 text-base">Quick Links</h4>
+      <h3 class="text-white font-semibold mb-4 text-base">Quick Links</h3>
       <ul class="space-y-3">
         <li><a href="universities.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Universities</a></li>
         <li><a href="programmes.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Programmes</a></li>
@@ -971,7 +840,7 @@ Can you help after I receive an offer?
       </ul>
     </div>
     <div>
-      <h4 class="text-white font-semibold mb-4 text-base">Popular Programmes</h4>
+      <h3 class="text-white font-semibold mb-4 text-base">Popular Programmes</h3>
       <ul class="space-y-3">
         <li><a href="programmes.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Business &amp; Management</a></li>
         <li><a href="programmes.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block">Computer Science &amp; IT</a></li>
@@ -980,7 +849,7 @@ Can you help after I receive an offer?
       </ul>
     </div>
     <div>
-      <h4 class="text-white font-semibold mb-4 text-base">Contact</h4>
+      <h3 class="text-white font-semibold mb-4 text-base">Contact</h3>
       <ul class="space-y-3">
         <li><a href="contact.html" class="text-slate-400 hover:text-[#0F9F8F] transition-colors block flex items-center gap-2"><span class="material-symbols-outlined text-base">call</span> Contact Sri Lanka</a></li>
         <li>
@@ -1179,12 +1048,12 @@ Can you help after I receive an offer?
    target="_blank"
    rel="noopener noreferrer"
    aria-label="Chat with us on WhatsApp">
-  <div class="wa-pulse-ring"></div>
-  <span class="material-symbols-outlined"
+  <div class="wa-pulse-ring" aria-hidden="true"></div>
+  <span class="material-symbols-outlined" aria-hidden="true"
         style="color:white; font-size:28px;
                font-variation-settings:'FILL' 1,'wght' 400,
                'GRAD' 0,'opsz' 24;">chat</span>
-  <div class="wa-tooltip">Chat on WhatsApp</div>
+  <div class="wa-tooltip" aria-hidden="true">Chat on WhatsApp</div>
 </a>
 <script>
 (function() {
@@ -1216,6 +1085,9 @@ Can you help after I receive an offer?
 })();
 </script>
 </body></html>
+
+
+
 
 
 

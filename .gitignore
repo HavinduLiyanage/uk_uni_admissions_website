@@ -1,6 +1,22 @@
 # Exclude original design/stitch portfolio folder
 stitch_ukadmit_modern_redesign_portfolio/
 
-# OS files
+# Development tooling — never deploy
+skills-lock.json
+squirrel.toml
+.agents/
+*.src.js
+*.original.jpg
+*.original.png
+
+# Node / Tailwind build
+node_modules/
+package.json
+package-lock.json
+tailwind.config.js
+tailwind.input.css
+
+# OS / editor
 .DS_Store
 Thumbs.db
+*.swp

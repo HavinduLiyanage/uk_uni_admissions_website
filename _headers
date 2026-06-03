@@ -1,0 +1,24 @@
+/*
+  # Prevent clickjacking
+  X-Frame-Options: DENY
+
+  # Prevent MIME-type sniffing
+  X-Content-Type-Options: nosniff
+
+  # Enforce HTTPS for 2 years, include subdomains
+  Strict-Transport-Security: max-age=63072000; includeSubDomains; preload
+
+  # Control referrer leakage to third-party links (WhatsApp, university sites)
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Disable browser APIs the site never uses
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=(), usb=()
+
+  # Content Security Policy
+  # - script-src: own origin + inline scripts (marquee, stats, form handler)
+  # - style-src: own origin + inline styles + Google Fonts CSS
+  # - font-src: own origin + Google Fonts files
+  # - img-src: own origin + data URIs + HTTPS (OG images etc.)
+  # - connect-src: own origin + Formspree (form submission)
+  # - frame-ancestors: replaces X-Frame-Options for modern browsers
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://formspree.io; frame-ancestors 'none'; base-uri 'self'; form-action 'self' https://formspree.io
