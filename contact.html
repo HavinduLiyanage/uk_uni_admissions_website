@@ -327,33 +327,63 @@
 <h2 class="font-headline-lg text-headline-lg text-primary text-center mb-12">Frequently Asked Questions</h2>
 <div class="flex flex-col border-t border-surface-variant">
 <div class="py-6 border-b border-surface-variant group">
-<div class="flex justify-between items-center cursor-pointer">
+<button class="w-full flex justify-between items-center cursor-pointer text-left gap-4" type="button" data-faq-toggle aria-expanded="true" aria-controls="faq-answer-1">
 <h3 class="font-headline-md text-[20px] text-primary">Is the initial consultation really free?</h3>
-<span class="material-symbols-outlined text-secondary transition-transform group-hover:translate-y-1" data-icon="expand_more">expand_more</span>
-</div>
-<div class="mt-4 font-body-md text-body-md text-on-surface-variant pr-8">
+<span class="material-symbols-outlined text-secondary transition-transform" data-faq-icon data-icon="expand_more">expand_more</span>
+</button>
+<div id="faq-answer-1" class="mt-4 font-body-md text-body-md text-on-surface-variant pr-8">
                         Yes, your first consultation is completely free of charge. We use this time to understand your academic background, goals, and provide a high-level overview of your options without any obligation.
                     </div>
 </div>
 <div class="py-6 border-b border-surface-variant group">
-<div class="flex justify-between items-center cursor-pointer">
+<button class="w-full flex justify-between items-center cursor-pointer text-left gap-4" type="button" data-faq-toggle aria-expanded="false" aria-controls="faq-answer-2">
 <h3 class="font-headline-md text-[20px] text-primary">What should I prepare for the call?</h3>
-<span class="material-symbols-outlined text-secondary transition-transform group-hover:translate-y-1" data-icon="expand_more">expand_more</span>
-</div>
-<div class="mt-4 font-body-md text-body-md text-on-surface-variant pr-8 hidden">
+<span class="material-symbols-outlined text-secondary transition-transform" data-faq-icon data-icon="expand_more">expand_more</span>
+</button>
+<div id="faq-answer-2" class="mt-4 font-body-md text-body-md text-on-surface-variant pr-8 hidden">
                         It's helpful to have your academic transcripts, any English proficiency test scores (like IELTS), and a general idea of the subjects you wish to study. Don't worry if you don't have everything yet!
                     </div>
 </div>
 <div class="py-6 border-b border-surface-variant group">
-<div class="flex justify-between items-center cursor-pointer">
+<button class="w-full flex justify-between items-center cursor-pointer text-left gap-4" type="button" data-faq-toggle aria-expanded="false" aria-controls="faq-answer-3">
 <h3 class="font-headline-md text-[20px] text-primary">How long does a typical consultation last?</h3>
-<span class="material-symbols-outlined text-secondary transition-transform group-hover:translate-y-1" data-icon="expand_more">expand_more</span>
-</div>
-<div class="mt-4 font-body-md text-body-md text-on-surface-variant pr-8 hidden">
+<span class="material-symbols-outlined text-secondary transition-transform" data-faq-icon data-icon="expand_more">expand_more</span>
+</button>
+<div id="faq-answer-3" class="mt-4 font-body-md text-body-md text-on-surface-variant pr-8 hidden">
                         Initial consultations usually take about 30 to 45 minutes, giving us ample time to discuss your profile and map out potential next steps.
                     </div>
 </div>
 </div>
+<script>
+(function () {
+  var toggles = Array.prototype.slice.call(document.querySelectorAll('[data-faq-toggle]'));
+
+  toggles.forEach(function (toggle) {
+    var panel = document.getElementById(toggle.getAttribute('aria-controls'));
+    var icon = toggle.querySelector('[data-faq-icon]');
+
+    function setOpen(isOpen) {
+      toggle.setAttribute('aria-expanded', String(isOpen));
+      if (panel) panel.classList.toggle('hidden', !isOpen);
+      if (icon) icon.style.transform = isOpen ? 'rotate(180deg)' : 'rotate(0deg)';
+    }
+
+    setOpen(toggle.getAttribute('aria-expanded') === 'true');
+
+    toggle.addEventListener('click', function () {
+      var shouldOpen = toggle.getAttribute('aria-expanded') !== 'true';
+      toggles.forEach(function (otherToggle) {
+        var otherPanel = document.getElementById(otherToggle.getAttribute('aria-controls'));
+        var otherIcon = otherToggle.querySelector('[data-faq-icon]');
+        otherToggle.setAttribute('aria-expanded', 'false');
+        if (otherPanel) otherPanel.classList.add('hidden');
+        if (otherIcon) otherIcon.style.transform = 'rotate(0deg)';
+      });
+      setOpen(shouldOpen);
+    });
+  });
+})();
+</script>
 </section>
 <!-- Final Conversion Panel -->
 <section class="max-w-container-max mx-auto px-6">
