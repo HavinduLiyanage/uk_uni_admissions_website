@@ -163,6 +163,12 @@ html, body { overflow-x: hidden; }
 }
 
 /* ─── Programme Cards ────────────────────────── */
+@media (min-width: 768px) {
+  .md\:h-\[560px\] {
+    height: 584px !important;
+  }
+}
+
 @media (max-width: 767px) {
   /* Allow programme cards to grow naturally */
   .h-\[560px\] { height: auto !important; }
