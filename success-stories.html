@@ -79,6 +79,101 @@
             background-size: 40px 40px;
             background-repeat: repeat;
         }
+
+        .success-page {
+            background: #fbfafc;
+        }
+
+        .success-hero {
+            padding-top: clamp(3rem, 6vw, 5.5rem);
+            padding-bottom: clamp(3rem, 6vw, 5rem);
+        }
+
+        .success-hero p {
+            margin-bottom: 0;
+        }
+
+        .success-section {
+            padding-top: clamp(3rem, 6vw, 5rem);
+            padding-bottom: clamp(3rem, 6vw, 5rem);
+        }
+
+        .success-section + .success-section {
+            padding-top: 0;
+        }
+
+        .success-highlight-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
+            gap: 24px;
+            align-items: stretch;
+        }
+
+        .success-feature-card {
+            min-height: clamp(300px, 26vw, 380px);
+            display: flex;
+            align-items: center;
+            border-radius: 1rem;
+        }
+
+        .success-feature-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            padding: clamp(1.5rem, 3vw, 2.5rem);
+            color: #fff;
+        }
+
+        .success-side-stack {
+            display: grid;
+            grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+            gap: 24px;
+        }
+
+        .success-side-card {
+            min-height: 0;
+        }
+
+        .success-card {
+            height: 100%;
+        }
+
+        .success-card h3,
+        .success-feature-card h3,
+        .success-side-card p {
+            overflow-wrap: anywhere;
+        }
+
+        @media (max-width: 1023px) {
+            .success-highlight-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .success-side-stack {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                grid-template-rows: none;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .success-hero,
+            .success-section {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            .success-section + .success-section {
+                padding-top: 0;
+            }
+
+            .success-side-stack {
+                grid-template-columns: 1fr;
+            }
+
+            .success-feature-card {
+                min-height: auto;
+            }
+        }
     </style>
 </head>
 <body class="bg-background text-on-background font-body-md antialiased pt-20">
@@ -122,11 +217,11 @@
     <a href="contact.html" class="block mt-3 bg-[#0F9F8F] text-white text-center py-3 rounded-lg text-sm font-bold">Book Free Consultation</a>
   </div>
 </nav>
-<div style="padding-top:72px"></div>
 <!-- TopAppBar -->
 
+<main id="main-content" class="success-page">
 <!-- Hero Section -->
-<section class="relative py-section-gap overflow-hidden bg-surface-container-low bg-geometric border-b border-surface-variant">
+<section class="success-hero relative overflow-hidden bg-surface-container-low bg-geometric border-b border-surface-variant">
 <div class="max-w-container-max mx-auto px-gutter relative z-10 flex flex-col items-center text-center">
 <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-fixed/50 text-secondary mb-8">
 <span class="material-symbols-outlined text-sm" data-icon="school">school</span>
@@ -137,13 +232,13 @@
 </div>
 </section>
 <!-- Bento Grid (Testimonials Snapshot) -->
-<section class="max-w-container-max mx-auto px-gutter py-section-gap">
-<div class="grid grid-cols-1 md:grid-cols-12 gap-element-gap md:auto-rows-[320px]">
+<section class="success-section max-w-container-max mx-auto px-gutter">
+<div class="success-highlight-grid">
 <!-- Featured Large Success Card (Span 8 cols, 2 rows) -->
-<div class="md:col-span-8 md:row-span-2 relative rounded-2xl overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.05)] group min-h-[360px] bg-primary">
+<div class="success-feature-card relative overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.05)] group bg-primary">
 <div class="absolute inset-0 bg-geometric opacity-10 pointer-events-none"></div>
 <div class="absolute -top-20 -right-20 w-64 h-64 bg-secondary rounded-full blur-3xl opacity-20 pointer-events-none"></div>
-<div class="absolute bottom-0 left-0 p-[40px] text-on-primary relative z-10">
+<div class="success-feature-content">
 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold tracking-wider mb-6">
 <span class="material-symbols-outlined text-sm">check_circle</span> UK Student Visa Approved
 </div>
@@ -157,17 +252,18 @@
 </div>
 </div>
 </div>
+<div class="success-side-stack">
 <!-- Stat Block (Span 4 cols) -->
-<div class="md:col-span-4 rounded-2xl bg-secondary text-on-secondary p-[32px] flex flex-col justify-center shadow-[0px_10px_30px_rgba(11,31,58,0.05)] relative overflow-hidden">
+<div class="success-side-card rounded-2xl bg-secondary text-on-secondary p-[32px] flex flex-col justify-center shadow-[0px_10px_30px_rgba(11,31,58,0.05)] relative overflow-hidden">
 <div class="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-white/10 blur-2xl"></div>
 <div class="relative z-10">
-<h4 class="font-display-lg text-display-lg mb-2">29+</h3>
+<h4 class="font-display-lg text-display-lg mb-2">29+</h4>
 <p class="font-headline-md text-headline-md mb-2">UK Universities</p>
 <p class="font-body-md text-body-md opacity-90">Across the UK, with free application guidance for Sri Lankan students.</p>
 </div>
 </div>
 <!-- Mini Success Card (Span 4 cols) -->
-<div class="md:col-span-4 rounded-2xl bg-surface-container-lowest p-[32px] shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant flex flex-col justify-between group hover:border-secondary transition-colors duration-300">
+<div class="success-side-card rounded-2xl bg-surface-container-lowest p-[32px] shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant flex flex-col justify-between group hover:border-secondary transition-colors duration-300">
 <div>
 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-fixed/40 text-secondary text-xs font-bold tracking-wider mb-4">
 <span class="material-symbols-outlined text-sm">verified</span> Visa Approved
@@ -185,17 +281,18 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <!-- Success Stories Grid -->
-<section class="max-w-container-max mx-auto px-gutter py-section-gap">
-<div class="text-center mb-16">
+<section class="success-section max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-10">
 <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Visa Success Stories</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Real students. Real visas. Here are some of the Sri Lankan students we've guided to successful UK university placements.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-element-gap">
 
 <!-- Card 1: D. Warshadeera -->
-<div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="success-card bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
 <div class="flex items-center gap-4 mb-6 pb-6 border-b border-surface-variant">
 <div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-lg flex-shrink-0">DW</div>
 <div>
@@ -218,7 +315,7 @@
 </div>
 
 <!-- Card 2: Thoshitha Kaduruwewa -->
-<div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="success-card bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
 <div class="flex items-center gap-4 mb-6 pb-6 border-b border-surface-variant">
 <div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-lg flex-shrink-0">TK</div>
 <div>
@@ -249,7 +346,7 @@
 </div>
 
 <!-- Card 3: Deliesha Gunaratna -->
-<div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="success-card bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
 <div class="flex items-center gap-4 mb-6 pb-6 border-b border-surface-variant">
 <div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-lg flex-shrink-0">DG</div>
 <div>
@@ -280,7 +377,7 @@
 </div>
 
 <!-- Card 4: Mohan Siriwarnasinghe -->
-<div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="success-card bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
 <div class="flex items-center gap-4 mb-6 pb-6 border-b border-surface-variant">
 <div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-lg flex-shrink-0">MS</div>
 <div>
@@ -307,7 +404,7 @@
 </div>
 
 <!-- Card 5: Johsual Thiveniya Sathiyamoorthy -->
-<div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="success-card bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
 <div class="flex items-center gap-4 mb-6 pb-6 border-b border-surface-variant">
 <div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-lg flex-shrink-0">JS</div>
 <div>
@@ -338,7 +435,7 @@
 </div>
 
 <!-- Card 6: Achini Shalika Konara -->
-<div class="bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="success-card bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
 <div class="flex items-center gap-4 mb-6 pb-6 border-b border-surface-variant">
 <div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-lg flex-shrink-0">AK</div>
 <div>
@@ -371,7 +468,7 @@
 </div>
 </section>
 <!-- Share Your Story -->
-<section class="max-w-container-max mx-auto px-gutter py-16">
+<section class="success-section max-w-container-max mx-auto px-gutter">
 <div class="bg-surface-container-low rounded-2xl p-10 text-center border border-slate-100">
 <span class="material-symbols-outlined text-4xl text-[#0F9F8F] mb-4 block" style="font-variation-settings:'FILL' 1,'wght' 400,'GRAD' 0,'opsz' 24;">edit_note</span>
 <h2 class="font-headline-md text-headline-md text-primary-container mb-3">Are you a UK Uni Admissions success story?</h2>
@@ -386,7 +483,7 @@ Share Your Story on WhatsApp
 </div>
 </section>
 <!-- Final CTA -->
-<section class="max-w-container-max mx-auto px-gutter pb-section-gap">
+<section class="success-section max-w-container-max mx-auto px-gutter">
 <div class="bg-primary rounded-2xl p-[48px] md:p-[80px] text-center relative overflow-hidden shadow-[0px_20px_40px_rgba(0,6,21,0.2)]">
 <!-- Decorative background elements -->
 <div class="absolute top-0 left-0 w-full h-full opacity-10 bg-geometric pointer-events-none"></div>
@@ -415,7 +512,8 @@ Share Your Story on WhatsApp
       <span class="material-symbols-outlined text-[14px]">schedule</span> Average response time: under 2 hours
     </p>
   </div>
-</section><!-- Footer -->
+</section>
+</main><!-- Footer -->
 
 <footer class="bg-[#0B1F3A] w-full py-14 px-8 border-t border-slate-800" style="font-family:Manrope,sans-serif;">
   <div class="grid grid-cols-1 md:grid-cols-4 gap-10 max-w-7xl mx-auto text-slate-300 text-sm">
