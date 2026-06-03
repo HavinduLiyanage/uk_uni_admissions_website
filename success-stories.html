@@ -102,57 +102,16 @@
             padding-top: 0;
         }
 
-        .success-highlight-grid {
-            display: grid;
-            grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.75fr);
-            gap: 24px;
+        .success-stories-grid {
             align-items: stretch;
-        }
-
-        .success-feature-card {
-            min-height: clamp(300px, 26vw, 380px);
-            display: flex;
-            align-items: center;
-            border-radius: 1rem;
-        }
-
-        .success-feature-content {
-            position: relative;
-            z-index: 10;
-            width: 100%;
-            padding: clamp(1.5rem, 3vw, 2.5rem);
-            color: #fff;
-        }
-
-        .success-side-stack {
-            display: grid;
-            grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
-            gap: 24px;
-        }
-
-        .success-side-card {
-            min-height: 0;
         }
 
         .success-card {
             height: 100%;
         }
 
-        .success-card h3,
-        .success-feature-card h3,
-        .success-side-card p {
+        .success-card h3 {
             overflow-wrap: anywhere;
-        }
-
-        @media (max-width: 1023px) {
-            .success-highlight-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .success-side-stack {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-                grid-template-rows: none;
-            }
         }
 
         @media (max-width: 767px) {
@@ -164,14 +123,6 @@
 
             .success-section + .success-section {
                 padding-top: 0;
-            }
-
-            .success-side-stack {
-                grid-template-columns: 1fr;
-            }
-
-            .success-feature-card {
-                min-height: auto;
             }
         }
     </style>
@@ -231,65 +182,13 @@
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mb-12">Discover how we've helped ambitious minds from around the world navigate the complexities of UK university admissions to secure their place at top-tier academic institutions.</p>
 </div>
 </section>
-<!-- Bento Grid (Testimonials Snapshot) -->
-<section class="success-section max-w-container-max mx-auto px-gutter">
-<div class="success-highlight-grid">
-<!-- Featured Large Success Card (Span 8 cols, 2 rows) -->
-<div class="success-feature-card relative overflow-hidden shadow-[0px_10px_30px_rgba(11,31,58,0.05)] group bg-primary">
-<div class="absolute inset-0 bg-geometric opacity-10 pointer-events-none"></div>
-<div class="absolute -top-20 -right-20 w-64 h-64 bg-secondary rounded-full blur-3xl opacity-20 pointer-events-none"></div>
-<div class="success-feature-content">
-<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 border border-white/20 text-white text-xs font-bold tracking-wider mb-6">
-<span class="material-symbols-outlined text-sm">check_circle</span> UK Student Visa Approved
-</div>
-<h3 class="font-headline-md text-headline-md mb-6 max-w-2xl">MSc Quantity Surveying &amp; Commercial Management</h3>
-<div class="flex items-center gap-4">
-<div class="w-14 h-14 rounded-full bg-secondary flex items-center justify-center text-on-secondary font-bold text-lg flex-shrink-0">MS</div>
-<div>
-<p class="font-label-bold text-label-bold text-white">Mohan Siriwarnasinghe</p>
-<p class="font-body-md text-body-md text-white/80">Oxford Brookes University, UK &mdash; September Intake 2021</p>
-</div>
-</div>
-</div>
-</div>
-<div class="success-side-stack">
-<!-- Stat Block (Span 4 cols) -->
-<div class="success-side-card rounded-2xl bg-secondary text-on-secondary p-[32px] flex flex-col justify-center shadow-[0px_10px_30px_rgba(11,31,58,0.05)] relative overflow-hidden">
-<div class="absolute -right-10 -top-10 w-40 h-40 rounded-full bg-white/10 blur-2xl"></div>
-<div class="relative z-10">
-<h4 class="font-display-lg text-display-lg mb-2">29+</h4>
-<p class="font-headline-md text-headline-md mb-2">UK Universities</p>
-<p class="font-body-md text-body-md opacity-90">Across the UK, with free application guidance for Sri Lankan students.</p>
-</div>
-</div>
-<!-- Mini Success Card (Span 4 cols) -->
-<div class="success-side-card rounded-2xl bg-surface-container-lowest p-[32px] shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant flex flex-col justify-between group hover:border-secondary transition-colors duration-300">
-<div>
-<div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-secondary-fixed/40 text-secondary text-xs font-bold tracking-wider mb-4">
-<span class="material-symbols-outlined text-sm">verified</span> Visa Approved
-</div>
-<p class="font-headline-md text-headline-md text-primary mb-2">MSc Digital Marketing</p>
-<p class="font-body-md text-body-md text-on-surface-variant mb-1">Oxford Brookes University, UK</p>
-<p class="text-sm text-on-surface-variant">Spring 2023 &mdash; January Entry</p>
-</div>
-<div class="flex items-center gap-3 border-t border-surface-variant pt-4">
-<div class="w-10 h-10 rounded-full bg-primary-fixed-dim flex items-center justify-center text-on-primary-fixed font-bold text-sm flex-shrink-0">AK</div>
-<div>
-<p class="font-label-bold text-label-bold text-primary">Achini Shalika Konara</p>
-<p class="text-sm text-on-surface-variant">Anula Vidyalaya, Nugegoda</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
 <!-- Success Stories Grid -->
 <section class="success-section max-w-container-max mx-auto px-gutter">
 <div class="text-center mb-10">
 <h2 class="font-headline-lg text-headline-lg text-primary mb-4">Visa Success Stories</h2>
 <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">Real students. Real visas. Here are some of the Sri Lankan students we've guided to successful UK university placements.</p>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-element-gap">
+<div class="success-stories-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-element-gap">
 
 <!-- Card 1: D. Warshadeera -->
 <div class="success-card bg-surface-container-lowest rounded-2xl p-8 shadow-[0px_10px_30px_rgba(11,31,58,0.05)] border border-surface-variant/50 hover:-translate-y-2 hover:shadow-xl transition-all duration-300 flex flex-col">
