@@ -216,3 +216,28 @@ html, body { overflow-x: hidden; }
     gap: 0.75rem !important;
   }
 }
+
+@media (max-width: 639px) {
+  .hero-search-box {
+    display: grid !important;
+    grid-template-columns: auto minmax(0, 1fr);
+    gap: 0.75rem !important;
+    align-items: center !important;
+    padding: 0.875rem !important;
+  }
+
+  .hero-search-icon {
+    margin-left: 0 !important;
+  }
+
+  .hero-search-input {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .hero-search-button {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 3rem;
+  }
+}
