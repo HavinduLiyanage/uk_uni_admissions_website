@@ -1,4 +1,4 @@
 ﻿User-agent: *
 Allow: /
 
-Sitemap: https://ukuniadmissions.com/sitemap.xml
+Sitemap: https://www.ukuniadmissions.com/sitemap.xml
